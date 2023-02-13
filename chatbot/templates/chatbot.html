@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=yes">
+    <title>Chat Bot UI/UX & html for web Plugin | Css3 Transition </title>
+    <meta name="description" content="Chat Bot UI/UX & html for web" />
+    <meta name="keywords" content="Chat Bot UI/UX & html for web, UI/UX for chat bot, chat bot html, best chatbot, chatbot app, online chat bot plugin" />
+    <meta name="author" content="css3transition" />
+    <link rel="shortcut icon" href="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static 'img/we-are-here.svg' %}">
+    <meta name="description" content="Chat Bot UI/UX & html for web, UI/UX for chat bot, chat bot html, best chatbot, chatbot app, online chat bot plugin | Css3Transition " />
+    <meta name="keywords" content="Chat Bot UI/UX & html for web, UI/UX for chat bot, chat bot html, best chatbot, chatbot app, online chat bot plugin" />
+    <meta name="abstract" content="Chat Bot UI/UX & html for web, UI/UX for chat bot, chat bot html, best chatbot, chatbot app, online chat bot plugin">
+    <meta name="author" content="Rahul Yaduvanshi">
+    <meta name="technologies" content="HTML5, CSS3, HTML, CSS, JQUERY, Bootstrap, Angular">
+    <meta name="distribution" content="Global">
+    <meta name="development" content="Rahul Yaduvanshi">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="city" content="New Delhi">
+    <meta name="country" content="india">
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static 'css/main.css' %}" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <link href="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static 'css/select2.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static 'css/chatBot.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static 'css/timeline.css' %}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> </head>
+<script src="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static 'js/jquery-3.1.1.min.js' %}"></script>
+
+<body>
+
+    <!-- Chat bot UI start -->
+    <div class="chat-screen ">
+        <div class="chat-header">
+            <div class="chat-header-title">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static 'images/bot2.png' %}" alt="" class="w-100">
+                    </div>
+                    <div class="col-9 text-dark">
+                        <div style="font-size:23px;">Chatbot</div>
+                        <span class="text-muted">Online</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="chat-header-option text-dark">
+                <i id="close_times" class="fa fa-times" style="font-size: 22px;"></i>
+            </div>
+        </div>
+        <div class="chat-mail hide">
+            <div class="row">
+                <div class="col-md-12 text-center mb-2">
+                    <p>Hi 👋! Please fill out the form below to start chatting with the next available agent.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Name" id="name">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" id="email">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <select class="form-control  select2_el">
+                        <option selected="selected">Select Option</option>
+                        <option>Report Abuse</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <button class="btn btn-primary btn-rounded btn-block">Start Chat</button>
+                </div>
+                <div class="col-md-12">
+                    <div class="powered-by">Powered by Jayavarsh</div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-body">
+            <!-- <div class="text-center">{{nowDate}}</div>
+            @if(Session::has('botChat')) @foreach (Session::get('botChat') as $chat) @if ($chat['user'] == 1)
+            <div class="chat-bubble me">$chat['message']</div>
+            @else
+            <div class="chat-bubble you">$chat['message']</div>
+            @endif @endforeach @endif -->
+        </div>
+        <form onsubmit="$('.send_btn').click(); return false;">
+            <div class="chat-input ">
+                <input type="text" placeholder="Type a message..." class="input_box">
+                <div class="input-action-icon h5">
+                    <!-- <a><i class="fa fa-paperclip"></i></a> -->
+                    <button type="button" class="send_btn"><i class="fa fa-paper-plane text-muted"></i></button>
+                </div>
+            </div>
+        </form>
+        <div class="chat-footer bg-light pt-3 p-2">
+            <div class="text-center" style="font-size: 10px;">Powered by <span class="text-primary">Jaya Bot</span></div>
+        </div>
+        <div class="chat-session-end hide">
+            <h5>This chat session has ended</h5>
+            <p>Thank you for chatting with us, If you can take a minute and rate this chat:</p>
+            <div class="rate-me">
+                <div class="rate-bubble great">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-thumbs-up">
+                            <path
+                                d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
+                            </path>
+                        </svg></span> Great
+                </div>
+                <div class="rate-bubble bad">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-thumbs-down">
+                            <path
+                                d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17">
+                            </path>
+                        </svg></span> Bad
+                </div>
+            </div>
+            <a class="transcript-chat">Need a Transcript?</a>
+            <div class="powered-by">Powered by Jayavarsh</div>
+        </div>
+    </div>
+    <div class="chat-bot-icon">
+        <img src="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static 'img/we-are-here.svg' %}" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square animate">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x ">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </div>
+    <!-- Chat Bot UI Ends -->
+
+    <script defer src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="257be86a981729866f2fa61c-|49" defer=""></script>
+    <!-- Time line Html Ends -->
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script defer src="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static 'js/popper.min.js' %}"></script>
+    <script src="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static 'js/bootstrap.min.js' %}"></script>
+    <script defer src="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static 'js/select2.min.js' %}"></script>
+    <script defer src="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static 'chatbot.js' %}"></script>
+</body>
+
+</html>
