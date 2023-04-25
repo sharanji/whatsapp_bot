@@ -62,18 +62,21 @@ $('.send_btn').click(function() {
         $.ajax({
             url: window.location.href + '/ajax',
             type: 'get',
+
             data: {
                 question: val,
+                format: 'json',
             },
             success: function(response) {
 
-                result = response.split("=");
+                result = response;
+
                 if (val != '') {
                     chatHistory.push({ "user": val });
                 }
                 if (Array.isArray(result)) {
                     result.forEach(e => {
-                        chatHistory.push({ "bot": e });
+                        chatHistory.push({ "bot": `${e}` });
                         $('.chat-body').append(`<div class="chat-bubble you">${e}</div>`);
                     });
                 } else {

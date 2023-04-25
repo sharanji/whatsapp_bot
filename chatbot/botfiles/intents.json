@@ -1,5 +1,146 @@
 {
     "intents": [{
+            "tag": "menu",
+            "patterns": [
+                "menu"
+            ],
+            "type": "button",
+            "responses": [{
+                "header": "How can we help you?",
+                "body": "Select anything below. \nAt any point, if you want to come back to the main menu, type menu.",
+                "footer": "For further query reach to support@jesperapps.com",
+                "action": {
+                    "button": "Select category",
+                    "sections": [{
+                        "title": "Your query",
+                        "rows": [{
+                                "id": "services",
+                                "title": "Our Services",
+                                "description": ""
+                            },
+                            {
+                                "id": "products",
+                                "title": "Our products",
+                                "description": ""
+                            },
+
+                            {
+                                "id": "about Jesperapps",
+                                "title": "About Jesperapps",
+                                "description": ""
+                            },
+                            {
+                                "id": "Create Website / App",
+                                "title": "Create Website / App",
+                                "description": ""
+                            }, {
+                                "id": "demo",
+                                "title": "Request a demo",
+                                "description": ""
+                            }
+                        ]
+                    }]
+                }
+            }]
+        },
+        {
+            "tag": "services",
+            "patterns": [
+                "services",
+                "What are your services",
+                "Tell about your services"
+            ],
+            "type": "button",
+            "responses": [{
+                "header": "Glad to introduce our services.",
+                "body": "To view any of our services select serivce name below. \nAt any point, if you want to come back to the main menu, type menu.",
+                "footer": "For further query reach to support@jesperapps.com",
+                "action": {
+                    "button": "Select service",
+                    "sections": [{
+                        "title": "Our Services",
+                        "rows": [{
+                                "id": "Oracle Fusion",
+                                "title": "Oracle Fusion",
+                                "description": ""
+                            },
+                            {
+                                "id": "Integration (OIC)",
+                                "title": "Integration (OIC)",
+                                "description": ""
+                            },
+
+                            {
+                                "id": "Oracle Apex",
+                                "title": "Oracle Apex",
+                                "description": ""
+                            },
+                            {
+                                "id": "Oracle E-Business suite",
+                                "title": "Oracle E-Business suite",
+                                "description": ""
+                            }, {
+                                "id": "Data science",
+                                "title": "Data science & Analytics",
+                                "description": ""
+
+                            }, {
+                                "id": " Custom ERP Development",
+                                "title": "Custom ERP Development",
+                                "description": ""
+
+                            }, {
+                                "id": "Mobile App Development",
+                                "title": "Mobile App Development",
+                                "description": ""
+                            }, {
+                                "id": "Website Development",
+                                "title": "Website Development",
+                                "description": ""
+                            }, {
+                                "id": "Digital Marketing",
+                                "title": "Digital Marketing",
+                                "description": ""
+                            }
+                        ]
+                    }]
+                }
+            }]
+        },
+        {
+            "tag": "products",
+            "patterns": [
+                "products",
+                "What are the products you have",
+                "List our products"
+            ],
+
+            "type": "button",
+            "responses": [{
+                "header": "Glad to introduce our Products.",
+                "body": "Jesperapps offers a variety of products that are necessary for many different sectors.\nTo view any of our products select product name below. \nAt any point, if you want to come back to the main menu, type menu.",
+                "footer": "For further query reach to support@jesperapps.com",
+                "action": {
+                    "button": "Our Products",
+                    "sections": [{
+                        "title": "Products",
+                        "rows": [{
+                                "id": "Web Application",
+                                "title": "Web Application",
+                                "description": ""
+                            },
+                            {
+                                "id": "Mobile Application",
+                                "title": "Mobile Application",
+                                "description": ""
+                            }
+                        ]
+                    }]
+                }
+            }]
+
+        },
+        {
             "tag": "greeting",
             "patterns": [
                 "Hi",
@@ -7,24 +148,44 @@
                 "How are you",
                 "Is anyone there?",
                 "Hello",
-                "Good day"
+                "hlo",
+                "Good day",
+                "hii"
             ],
+            "type": "text",
             "responses": [
-
-                "Hello, thanks for choosing Jesperapps. \n For more information vist Jesperapps.com"
+                "Hi <user_name>,Greetings from Jesper Apps Software services Pvt Ltd. Welcome to our chat service.\n you can also visit : https://www.jesperapps.com"
             ]
         },
         {
             "tag": "goodbye",
-            "patterns": ["Bye", "See you later", "Goodbye"],
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye",
+                "ok"
+            ],
+            "type": "text",
             "responses": [
-                "Your customer care executive will contact you soon, Thanks for considering Jesperapps."
+                "We have forwaded your query to our customer care executive and will contact you soon, Thanks for considering Jesperapps.",
+                "We have forwarding your query to our customer care executive and will contact you shortly, \n Thanks for considering Jesperapps.Have a great day."
             ]
         },
         {
             "tag": "thanks",
-            "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-            "responses": ["Happy to help!", "Any time!", "My pleasure"]
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Thank's a lot!"
+            ],
+            "type": "text",
+
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure"
+            ]
         },
         {
             "tag": "items",
@@ -33,6 +194,8 @@
                 "What kinds of items are there?",
                 "What do you sell?"
             ],
+            "type": "text",
+
             "responses": [
                 "We have all types of Software solutions like Erp systems,Website for growing buisness"
             ]
@@ -45,6 +208,8 @@
                 "Can I pay with Paypal?",
                 "Are you cash only?"
             ],
+            "type": "text",
+
             "responses": [
                 "We accept VISA, Mastercard and Paypal",
                 "We accept most major credit cards, and Paypal"
@@ -57,6 +222,8 @@
                 "How long does shipping take?",
                 "When do I get my delivery?"
             ],
+            "type": "text",
+
             "responses": [
                 "Delivery takes 2-4 days",
                 "Shipping takes 2-4 days"
@@ -69,9 +236,358 @@
                 "Tell me something funny!",
                 "Do you know a joke?"
             ],
+            "type": "text",
+
             "responses": [
                 "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
                 "What did the buffalo say when his son left for college? Bison."
+            ]
+        },
+        {
+            "tag": "aboutus",
+            "patterns": [
+                "Tell me a yourself",
+                "Tell me about jesperapps",
+                "about us"
+            ],
+            "type": "text",
+
+            "responses": [
+                "Jesper Apps is settled in India and is an overall pioneer in the DAS (Delivery as Service) model with broad involvement in giving the best, innovative, and interesting software solutions in different vertical businesses around the globe.\nJesper Apps has cut its essence by conveying the outcomes on time in India, UAE, Singapore, USA, and Vietnam. Furthermore, clear strategies are set up to enter developing business sectors in KSA, Africa, and Pakistan.\n*Our Vision*: Jesper Apps vision is to build an IT community to serve its customers and society by building and using innovative solutions.\n*Our Mission*: Our mission is to provide best-in-class, creative, unique software solutions that can solve all our client’s business problems that they face on a day-to-day basis. We provide software and solutions for companies of all sizes and all industry sectors.For more details, click here: https://www.jesperapps.com/about-us.html "
+            ]
+        }, {
+            "tag": "website",
+            "patterns": [
+                "Website",
+                "Web design",
+                "Create a Website",
+                "need a website",
+                "Website development"
+            ],
+            "type": "text",
+
+            "responses": [
+                "Website maintenance services and services are currently specialized in designing websites and keeping websites up-to-date, which is why we provide our clients with fast-acting, experienced, and approachable website maintenance services. We are considerate about maintaining the website which is created by the user and updating the website to surpass the user’s opponent in any way, even a simple change in text or adding additional complex functionality or tools to the websites.\n We build the relationship with our clients by giving them access to our expert team, which is hired for the convenience of the client and can solve all the issues immediately.\n We are expertise in,     \n * Web Design\n * E-Commerce Website\n * UI /UX Design\n * Custom Application\n For more information reach out support@jesperapps.com\n To go back to menu type menu."
+
+            ]
+        }, {
+            "tag": "Web Application",
+            "patterns": [
+                "Web Web Application",
+                "Web App",
+                "Create a Web Application"
+            ],
+            "type": "text",
+
+            "responses": [
+                "Jesperapps provides a wide range of web applications for various essential tasks.\n * Jesper Mail\n * Payroll\n * Performance Management System\n * Leave Management\n * Project Management\n * E-Note CRM\n * Inventory Management\n * Accounting Software\n * Hospital Management System\n * Pharmacy Management\n * Laboratory Management"
+            ]
+        }, {
+            "tag": "Mobile Application",
+            "patterns": [
+                "Mobile Application"
+            ],
+            "type": "button",
+            "responses": [{
+                "header": "Glad to introduce our Mobile Apps.",
+                "body": "Jesperapps provides a wide range of mobile applications for various essential tasks.\nTo view any of our app select app name below. \nAt any point, if you want to come back to the main menu, type menu.",
+                "footer": "For further query reach to support@jesperapps.com",
+                "action": {
+                    "button": "Our Mobile Apps",
+                    "sections": [{
+                        "title": "Mobile Apps",
+                        "rows": [{
+                                "id": "Leave Management App",
+                                "title": "Leave Management App",
+                                "description": ""
+                            },
+                            {
+                                "id": "Printlok",
+                                "title": "Printlok",
+                                "description": ""
+                            },
+                            {
+                                "id": "Jesper Scan App",
+                                "title": "Jesper Scan App",
+                                "description": ""
+                            },
+                            {
+                                "id": "Rosary Army",
+                                "title": "Rosary Army",
+                                "description": ""
+                            }, {
+                                "id": "Food Delivery app",
+                                "title": "Food Delivery app",
+                                "description": ""
+                            }
+                        ]
+                    }]
+                }
+            }]
+
+        },
+        {
+            "tag": "Mobile App development",
+            "patterns": [
+                "Mobile App development"
+            ],
+            "type": "text",
+
+            "responses": [
+                "We provide iOS and Android mobile application development services so you can reach your customers on their favourite devices. We reduce the complexity of your project by understanding and adjusting your business processes, integrating them with existing systems, and securely exposing business data. \n Our Approach towards App development, \n * Strategy\n * Analysis & Planning\n * UI / UX Design\n * Architecture & Workflows\n * Wireframe\n * Develop & Deploy\n * Testing & Quality Assurance\n We use technology like,     \n * Android App Development\n * IOS App Development\n * Flutter App Development\nFor more information reach out support@jesperapps.com\nTo go back to menu type menu."
+
+            ]
+        },
+
+        {
+            "tag": "Oracle Fusion",
+            "patterns": [
+                "Oracle Fusion",
+                "more about Oracle Fusion",
+                "Oracle Fusion serice"
+            ],
+            "type": "text",
+
+            "responses": [
+                "Oracle has created a family, or collection, of software programs known as Oracle Fusion. Due to the price of the software license, it is intended for use by enterprises, particularly medium-sized and large businesses.\n  We are expertise in,     \n * Oracle Supply chain planning\n * Oracle supply chain\n * Oracle Manufacturing\n * Warehouse Management\n * Oracle Transportation Management\n * Human capital Management\n * Financial Management\n For more information reach out support@jesperapps.com\n To go back to menu type menu."
+            ]
+        },
+        {
+            "tag": "Demo",
+            "patterns": [
+                "Demo",
+                "need a demo",
+                "can you show a demo"
+            ],
+            "type": "text",
+
+            "responses": [
+                "Thanks for approaching Jesperapps!\n Jesperapps Software Solution provides the best technology products and services,helps you to go online, and supports the growth of your business.\n Need a Demo, visit : https://www.jesperapps.com/productForm.html.\n View our products & Details: https://www.jesperapps.com/products.html  .\n  For further detailed information please reach to support@jesperapps.com \n To go back to menu, Type menu"
+            ]
+        }, {
+            "tag": "Oracle Integration",
+            "patterns": [
+                "Oracle Integration",
+                "oic",
+                "Integration"
+            ],
+            "type": "text",
+
+            "responses": [
+                "*Oracle Integration* is a platform for enterprise connectivity and automation that enables the rapid updating of data, APIs, business processes, and applications. A visual development environment, ready-made connectors, and integrated best practices enable developers and cloud architects to link SaaS and on-premises applications six times more quickly.\n * We are expertise in ,\n * Oracle Integration cloud\n * Service Oriented Architecture(SOA)\n * Oracle Data Integrator(ODI)\n * Oracle Service Bus(OSB)\n * Mulesoft Integration\n * Dell Boomi Integration\n For more information reach out support @jesperapps.com\n To go back to menu type menu."
+            ]
+        }, {
+            "tag": "Oracle Apex",
+            "patterns": [
+                "Oracle Apex",
+                "about Oracle Apex"
+            ],
+            "type": "text",
+
+            "responses": [
+                "*Oracle Apex* Oracle Application Express (APEX) is a low-code development platform that enables you to build stunning, scalable, secure apps with world-class features that can be deployed anywhere. It reduces costs of development and maintenance, thanks to dozens of components ready to use. Our experienced team of well-known APEX developers will help your company enter the Oracle Application Express world and extend its functionality to fit your business and the challenges you face\n For more information reach out support @jesperapps.com\n To go back to menu type menu."
+            ]
+        }, {
+            "tag": " Oracle E-Business Suite",
+            "patterns": [
+                "Oracle E-Business Suite",
+                "about  Oracle E-Business Suite"
+            ],
+            "type": "text",
+            "responses": [
+                "The Oracle E-business Suite is the most comprehensive suite of cohesive, global applications that enables productivity and meets the demands of modern mobile users. It empowers enterprises to make better decisions at reduced costs and helps with performance growth.\n Using Oracle APEX, we create web applications available on desktops and mobile devices. Starting with reporting and opportunistic applications, spreadsheet or access replacements, and ending with CRM and ERP systems.\n We are expertise in,     \n * Oracle Value chain planning\n * Oracle Supply Chain\n * Oracle Process Manufacturing\n * Oracle Supply chain Management\n * Oracle Financial\n * Oracle Human Resources Management System\n For more information reach out support@jesperapps.com \nTo go back to menu type menu."
+            ]
+        }, {
+            "tag": " Oracle E-Business Suite",
+            "type": "text",
+            "patterns": [
+                "Oracle E-Business Suite",
+                "about  Oracle E-Business Suite"
+            ],
+            "responses": [
+                "The Oracle E-business Suite is the most comprehensive suite of cohesive, global applications that enables productivity and meets the demands of modern mobile users. It empowers enterprises to make better decisions at reduced costs and helps with performance growth.\n Using Oracle APEX, we create web applications available on desktops and mobile devices. Starting with reporting and opportunistic applications, spreadsheet or access replacements, and ending with CRM and ERP systems.\n We are expertise in,     \n * Oracle Value chain planning\n * Oracle Supply Chain\n * Oracle Process Manufacturing\n * Oracle Supply chain Management\n * Oracle Financial\n * Oracle Human Resources Management System\n For more information reach out support@jesperapps.com \nTo go back to menu type menu."
+            ]
+        }, {
+            "tag": "Data Science and Analytics",
+            "patterns": [
+                "Data Science and Analytics",
+                "Data Science"
+            ],
+            "type": "text",
+            "responses": [
+                "Why does your business need data science and AI? Better decision-making with quantifiable evidence through measuring, tracking, and recording performance metrics and other information, Jesper Apps communicates and demonstrates the value of the institution’s data to facilitate improved decision-making processes across the entire organization. Improving the relevance of your product: Jesper Apps questions the existing processes and assumptions for the purpose of developing additional methods and analytical algorithms.\n Matter-Jesper Apps prepares the staff for success with a demonstration of the effective use of the system to extract insights and drive action. Once the staff understands the product capabilities, their focus can shift to addressing key business challenges and for further reference visit : https://www.jesperapps.com/data-science-and-analytics.html        \n For more information reach out support@jesperapps.com\n To go back to menu type menu."
+            ]
+        }, {
+            "tag": "Custom ERP Development",
+            "patterns": [
+                "Custom ERP Development",
+                "Custom ERP",
+                "Enterprise resource Planing",
+                "Sap"
+            ],
+            "type": "text",
+            "responses": [
+                "We at Jesper Apps provide the best ERP software solutions beneficial for the absorption and automation of business processes in manufacturing and trading firms in the SME sector. Enhancing an organization's growth and efficiency is simpler with quick and easy access to information. We create ERP software with years of industry experience and technical know-how that best satisfies the needs of numerous organizations. Additionally, they enable firms to keep up with rapidly evolving technology.\n For more information reach out support@jesperapps.com\n To go back to menu type menu."
+            ]
+        }, {
+            "tag": "Digital Marketing",
+            "patterns": [
+                "Digital Marketing",
+                "Digital Marketing solution"
+            ],
+            "type": "text",
+            "responses": [
+                "We focus on digital marketing as it is arguably the most powerful form of marketing available currently. Digital marketing came about with the advent of the internet and really took off with the widespread use and incorporation of social media. Digital marketing is extremely effective and has multiple methods of being carried out, all with their own pros and cons. However, if utilized correctly, digital marketing can transform a business or a brand.\n We use techniques like,     \n * Search Engine Optimization (SEO)\n * Social Media Marketing (SMM)\n * Search Engine Marketing (SEM)\n * Pay-Per-Click (PPC)\n * Email Marketing\n * Content Marketing\n For more information reach out support@jesperapps.com\n To go back to menu type menu."
+            ]
+        }, {
+            "tag": "Jesper Mail",
+            "patterns": [
+                "Jesper Mail",
+                "tell about Jesper Mail"
+            ],
+            "type": "text",
+            "responses": [
+                "Jesper mail is a web-based application and in cloud. This is an advantage   over                desktop email where your data is stored on your computer and a computer crash or    virus can sometimes prove catastrophic. Finally, your webmail also benefits from increased security with a reduced chance of hacking when compared to desktop email.\n *Features of Jespermail* : \n * Smart compose and smart reply\n * Email nudge and high-priority notices\n * Automatic email filters and categories\n Need a customized Email app for you, click here: Jesper Apps | Product Form\n To view other type of web applications type web\n To view category type products \n To go back to menu type menu  "
+            ]
+        }, {
+            "tag": "Payroll",
+            "patterns": [
+                "Payroll",
+                "tell about Payroll"
+            ],
+            "type": "text",
+            "responses": [
+                "A payroll is a set of employees whose pay you process with a single frequency, for example, weekly or monthly. You put an employee on a payroll by making an assignment to the payroll. \n *Features of Payroll :*   \n * Payroll Processing\n * Tracking Time\n * Leave entitlement\n * Data Management\n * Attendance\n * Salary disbursement\n Need a customized solution for you, click here: https://www.jesperapps.com/productForm.html \n To view other type of web applications type web\n To view category type products \n To go back to menu type menu  "
+            ]
+        }, {
+            "tag": "Leave Management System",
+            "patterns": [
+                "Leave Management System",
+                "tell about Leave Management System"
+            ],
+            "type": "text",
+            "responses": [
+                "Leave management handles all the HR activities. HR personnel have to ensure compliance with leave policies, guarantee the availability of sufficient staff at all times and also make sure that employee satisfaction is retained. \n *Features of Leave management system :*     \n * All-in-one Dashboard\n * Customisable approval\n * Auto-Update leave count\n * At-a-glance reporting\n * Cloud-based\n Need a customized solution for you, click here: https://www.jesperapps.com/productForm.html \n To view other type of web applications type web\n To view category type products \n To go back to menu type menu  "
+            ]
+        }, {
+            "tag": " Performance Management",
+            "patterns": [
+                "Performance Management",
+                "tell about  Performance Management"
+            ],
+            "type": "text",
+            "responses": [
+                "A performance management system allows employees to set their own goals, review their managers' or peers' performance, and keep track of their progress and performance.*Features of Performance management system :* \n * Self-Assessment\n * Higher Morale\n * Performance reviews\n * Clear Accountabilities\n * Integrations\n * Enhanced Skillset\n * Improved productivity\n Need a customized solution for you, click here: https://www.jesperapps.com/productForm.html \n To view other type of web applications type web\n To view category type products \n To go back to menu type menu  "
+            ]
+        }, {
+            "tag": "Customer Relationship Management",
+            "patterns": [
+                "Customer Relationship Management",
+                "tell about  Customer Relationship Management"
+            ],
+            "type": "text",
+            "responses": [
+                "The Jesper Apps CRM is a cloud-based, integrated customer relationship management platform that caters to the needs of businesses and industries of all sizes and types. This product comes with Lead Management, Quote Management, Sales Management, Workflow Automation, Campaign management, Real time chat functionalities and with ready-made dashboards.\n*Features of Performance management system:*    \n * Email Integration\n * Sales forecasting\n * Document Management\n * Reporting and Analytics\n * Lead nurturing\n * Performance Metrics\n * Ticketing System\n Need a customized solution for you, click here: https://www.jesperapps.com/productForm.html \n To view other type of web applications type web\n To view category type products \n To go back to menu type menu  "
+            ]
+        }, {
+            "tag": "Inventory Management",
+            "patterns": [
+                "Inventory Management",
+                "tell about  Inventory Management"
+            ],
+            "type": "text",
+            "responses": [
+                "Inventory management is a step in the supply chain where inventory and stock quantities are tracked in and out of your warehouse. It approaches to sourcing, storing, and selling inventory- both raw materials and finished goods.\n                *Features of Inventory management system :*\n * Inventory Management\n * Inventory forecasting\n * Inventory alerts\n * Inventory tracking\n * Inventory security and backups\n * Cloud-based software with real-time updates\n * Reporting tools\n * Inventory app integration with other system\n * Barcoding & Tagging .\n Need a customized solution for you, click here: https://www.jesperapps.com/productForm.html \n To view other type of web applications type web\n To view category type products \n To go back to menu type menu  "
+            ]
+        }, {
+            "tag": "Accounting Software",
+            "patterns": [
+                "Accounting Software",
+                "tell about  Accounting Software"
+            ],
+            "type": "text",
+            "responses": [
+                "Accounting software is a tool to help you record the flow of financial activities, you can record transactions, generate reports, manage customer and vendor contacts, create purchase orders, track stock levels, bill customers, and monitor account balances.\n *Features of Accounting Software:*    \n * Payroll\n * Track Expenses\n * Reporting\n * Secure Data\n * Invoicing and Billing\n * Maintain control of your finances\n * Reporting and Analysis\n * Budgeting and Forecasting\n Need a customized solution for you, click here: https://www.jesperapps.com/productForm.html \n To view other type of web applications type web\n To view category type products \n To go back to menu type menu  "
+            ]
+        }, {
+            "tag": "Hospital Management System",
+            "patterns": [
+                "Hospital Management System",
+                "tell about  Hospital Management System"
+            ],
+            "type": "text",
+            "responses": [
+                "A hospital management system (HMS) is a web-based system that facilitates managing the functionality of the hospital or any medical set up. It integrates all the information of patients, doctors, staff, Inventory, hospital administrative details etc.\n *Features of Hospital Management System :*   \n * Appointment\n * Patient Management\n * Billing Management\n * Prescription Management\n * Discharge Summary\n * Supplier Management\n * Pharmacy Management\n * Stock Management\n Need a customized solution for you, click here: https://www.jesperapps.com/productForm.html \n To view other type of web applications type web\n To view category type products \n To go back to menu type menu  "
+            ]
+        }, {
+            "tag": "Pharmacy Management",
+            "patterns": [
+                "Pharmacy Management",
+                "tell about  Pharmacy Management"
+            ],
+            "type": "text",
+            "responses": [
+                "A performance management system allows employees to set their own goals, review their managers' or peers' performance, and keep track of their progress and performance.\n *Features of Pharmacy Management :*    \n * Self-Assessment\n * Performance Review\n * Integration\n * Enhanced Skillset\n * Higher Morale\n * Clear Accountabilities\n * Improved productivity\n Need a customized solution for you, click here: https://www.jesperapps.com/productForm.html \n To view other type of web applications type web\n To view category type products \n To go back to menu type menu  "
+            ]
+        }, {
+            "tag": "Laboratory Management",
+            "patterns": [
+                "Laboratory Management",
+                "tell about Laboratory Management"
+            ],
+            "type": "text",
+            "responses": [
+                "Laboratory management software that is used in labs for data management and to process a large number of lab samples to manage laboratory workflow. the lab can automate workflows, integrate instruments, and manage samples and associated information. Additionally, labs can produce valid results quickly and can track data across experiments to improve efficiency.\n *Features of Laboratory Management :*\n * Scale Business Quickly\n * Clinical trials planning and management\n * Sample profiling including storing test results\n * Sample management and tracking\n * Disease profiling\n * Training and qualification tracking\n Need a customized solution for you, click here: https://www.jesperapps.com/productForm.html \n To view other type of web applications type web\n To view category type products \n To go back to menu type menu  "
+            ]
+        }, {
+            "tag": "Jespermail Mobile App",
+            "patterns": [
+                "Jespermail Mobile App",
+                "tell about Jespermail Mobile App"
+            ],
+            "type": "text",
+            "responses": [
+                "Email app allowed you to manage your email account from different service   providers.\n Need a customized solution for you, click here: https://www.jesperapps.com/productForm.html \n To view other type of web applications type web\n To view category type products \n To go back to menu type menu  "
+            ]
+        }, {
+            "tag": "Printlok App",
+            "patterns": [
+                "Printlok App",
+                "tell about Printlok App"
+            ],
+            "type": "text",
+            "responses": [
+                "A tracking system is an intrusive process of collecting information of employee's performance at the workplace. It is used for the observing of persons on the move and supplying a timely ordered sequence of location data for further processing.\n *Features of Laboratory Management :*     \n * Attendance\n * Performance evaluation\n * Assigning work location\n * GPS tracking\n * Helps in time tracking\n Need a customized solution for you, click here: https://www.jesperapps.com/productForm.html \n To view other type of web applications type web\n To view category type products \n To go back to menu type menu  "
+            ]
+        }, {
+            "tag": "Leave Management App",
+            "patterns": [
+                "Leave Management App",
+                "tell about Leave Management App"
+            ],
+            "type": "text",
+            "responses": [
+                "Leave management handles all the HR activities. HR personnel have to ensure compliance with leave policies, guarantee the availability of sufficient staff at all times and also make sure that employee satisfaction is retained. \n *Features of Leave management system :*     \n * All-in-one Dashboard\n * Customisable approval\n * Auto-Update leave count\n * At-a-glance reporting\n * Cloud-based\n Need a customized Leave Management app for you, click here: https://www.jesperapps.com/productForm.html \n To view other type of web applications type web\n To view category type products \n To go back to menu type menu  "
+            ]
+        }, {
+            "tag": "Food Delivery App",
+            "patterns": [
+                "Food Delivery App",
+                "tell about Food Delivery App"
+            ],
+            "type": "text",
+            "responses": [
+                "Use the influence and popularity of well-known food delivery juggernauts like Swiggy, Zomato, and UberEats to your advantage. Create and develop a food delivery app with a feature set as rich and as technologically advanced as Zomato, Swiggy, or UberEats.\n You may develop distinctive brand identification for your food business using Jesperapps' food ordering and delivery solutions. With your creative features and services, entice and attract foodies. Make an impressive online presence by getting in touch with the best food delivery app development firm in Hosur, Bangalore.\n *Features of Food Delivery App :*     \n * Profile Customization\n * Search Filters\n * Registration\n * Profile Customization\n * Searching Food\n * Order History\n * Notifications\n * Messaging\n * Providing Contact Information\n * Reward/Discount programs\n * GPS Tracking\n * Rating and reviews\n * Personal Favourites\n * Making payment easy\n Need a customized Food delivery app for you, click here: https://www.jesperapps.com/productForm.html \n To view other type of web applications type web\n To view category type products \n To go back to menu type menu  "
+            ]
+        }, {
+            "tag": "Rosary Army",
+            "patterns": [
+                "Rosary Army",
+                "tell about Rosary Army"
+            ],
+            "type": "text",
+            "responses": [
+                "Rosary Army has many prayers to look through and read. If you're looking for one strong prayer each day, then this is for you. You can also share your favourite prayers with family and friends who also have the application. Need a customized app for you, click here: https://www.jesperapps.com/productForm.html \n To view other type of web applications type web\n To view category type products \n To go back to menu type menu  "
             ]
         }
     ]

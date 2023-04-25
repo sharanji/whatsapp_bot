@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-*2u7v*1@_*1im_k5khy=z3(p8pmx5e8db$vscrv+0s8k-k&@(i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.43.216", '127.0.0.1', '192.168.2.3']
+ALLOWED_HOSTS = ['sharanji.pythonanywhere.com','*']
 
 # Application definition
 
@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders'
+    'corsheaders',
+    'rest_framework',
+    'chatbot'
 ]
 CORS_ORIGIN_WHITELIST = ('http://192.168.43.216',
                          'http://localhost', )
@@ -65,7 +67,7 @@ ROOT_URLCONF = 'monthly_challenges.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/"challenges"/"templates",
+        'DIRS': [
                  BASE_DIR/"chatbot"/"botfiles",
                  BASE_DIR/"chatbot"/"templates",
                  ],

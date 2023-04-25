@@ -6,13 +6,17 @@ import torch
 
 from chatbot.botfiles.model import NeuralNet
 from chatbot.botfiles.nltk_utils import bag_of_words, tokenize
+from pathlib import Path
+
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-with open('chatbot/botfiles/intents.json', 'r') as json_data:
+BASE_DIR = Path(__file__).resolve().parent
+
+with open(BASE_DIR/'intents.json', 'r') as json_data:
     intents = json.load(json_data)
 
-FILE = "chatbot/botfiles/data.pth"
+FILE = BASE_DIR/"data.pth"
 data = torch.load(FILE)
 
 input_size = data["input_size"]
@@ -33,7 +37,10 @@ bot_name = "jesbot"
 def talk(sentence):
     # sentence = "do you use credit cards?"
     if sentence == "quit":
-        return
+        return "Sorry .. I am can't able to understand"
+
+    # if sentence in ['1','2','3']:
+    #     return ['Thanks for your reponse']
 
     sentence = tokenize(sentence)
     X = bag_of_words(sentence, all_words)
@@ -47,12 +54,20 @@ def talk(sentence):
 
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
-    if prob.item() > 0.7:
+    if prob.item() > 0.6:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                return f"{random.choice(intent['responses'])} and {prob.item()}"
+                if intent['type'] != 'button':
+                    response = random.choice(intent['responses'])
+                else:
+                    response = intent['responses'][0]
+                return {
+                    "intent":intent["tag"],
+                    "response":response ,
+                    "type" : intent['type']
+                }
     else:
-        return "I do not understand..."
+        return { "intent":'unknown',"response":"Your query has been forwarded to our customer care excecutive and will contact you soon","type":"text"}
 
 
 # if __name__ == "__main__":

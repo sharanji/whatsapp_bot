@@ -1,0 +1,121 @@
+{
+    "intents": [{
+            "tag": "numberword",
+            "patterns": [
+                "multiple",
+                "single"
+            ],
+            "responses": [
+                "Your Number has been forwarded to website team. \n Thanks for Contacting Jesperapps."
+            ]
+        },
+        {
+            "tag": "two",
+            "patterns": [
+                "2"
+            ],
+            "responses": [
+                "We have a seprate team to handle your requirements.\n What is your requirement ? \n * Single Page . \n * Multiple Page"
+            ]
+        },
+        {
+            "tag": "number",
+            "patterns": [
+                "1"
+            ],
+            "responses": [
+                "We are forwading our number to your counsulting team . \n Stay calm until we reach you.\n For more Information about our services click below \n https://www.jesperapps.com/products.html"
+            ]
+        },
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "Hey",
+                "How are you",
+                "Is anyone there?",
+                "Hello",
+                "Good day"
+            ],
+            "responses": [
+                "Hello, thanks for choosing Jesperapps. \n \n How can we help you today ? \n Select a number \n 1. Book a free counsuting now . \n 2. Get a qoute for website . 3. Others .  \n For more information vist https://www.jesperapps.com",
+                "Hey there , thanks for considering Jesperapps \n 1. Book a free counsuting now . \n 2. Get a qoute for website . 3. Others .  \n For more information vist https://www.jesperapps.com"
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye",
+                "ok"
+            ],
+            "responses": [
+                "We have forwaded your query to our customer care executive and will contact you soon, Thanks for considering Jesperapps.",
+                "We have forwarding your query to our customer care executive and will contact you shortly, \n Thanks for considering Jesperapps.Have a great day."
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Thank's a lot!"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure"
+            ]
+        },
+        {
+            "tag": "items",
+            "patterns": [
+                "Which items do you have?",
+                "What kinds of items are there?",
+                "What do you sell?"
+            ],
+            "responses": [
+                "We have all types of Software solutions like Erp systems,Website for growing buisness"
+            ]
+        },
+        {
+            "tag": "payments",
+            "patterns": [
+                "Do you take credit cards?",
+                "Do you accept Mastercard?",
+                "Can I pay with Paypal?",
+                "Are you cash only?"
+            ],
+            "responses": [
+                "We accept VISA, Mastercard and Paypal",
+                "We accept most major credit cards, and Paypal"
+            ]
+        },
+        {
+            "tag": "delivery",
+            "patterns": [
+                "How long does delivery take?",
+                "How long does shipping take?",
+                "When do I get my delivery?"
+            ],
+            "responses": [
+                "Delivery takes 2-4 days",
+                "Shipping takes 2-4 days"
+            ]
+        },
+        {
+            "tag": "funny",
+            "patterns": [
+                "Tell me a joke!",
+                "Tell me something funny!",
+                "Do you know a joke?"
+            ],
+            "responses": [
+                "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+                "What did the buffalo say when his son left for college? Bison."
+            ]
+        }
+    ]
+}

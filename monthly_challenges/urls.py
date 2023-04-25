@@ -22,7 +22,6 @@ from django.conf import settings
 urlpatterns = [
     # path(''),
     # path('', include('challenges.urls')),
-    path('challenges/', include('challenges.urls')),
     path('chat/', include('chatbot.urls')),
 
 ]

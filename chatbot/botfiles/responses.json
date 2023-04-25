@@ -1,0 +1,27 @@
+[{
+
+        "responses_id": "2",
+        "responses": [
+            "To view our services, type 1 to 9 based on how you'd like to proceed.\n 1. Oracle Fusion \n2. Integration (OIC)\n3. Oracle Apex\n4. Oracle E-Business suite\n5. Data science and Analytics\n6. Custom ERP Development\n7. Mobile App Development\n8. Website Development\n9. Digital Marketing\n"
+        ],
+        "int": "1",
+        "section_name": "service"
+    },
+    {
+        "responses_id": "1",
+        "responses": [
+            "Hi <user_name>,\n Greetings from Jesper Apps Software services Pvt Ltd. Welcome to our chat service.",
+            "How can we help you? \n At any point, if you want to come back to the main menu, type 9. \n 1. Services \n 2.Products \n 3.About Us \n 4.Create Website/App \n 5.Request a Demo \n For further detailed information please reach to support@jesperapps.com"
+        ],
+        "int": "0",
+        "section_name": "greeting"
+    }, {
+        "responses_id": "3",
+        "int": "1",
+        "responses": [
+            "Oracle Fusion: Oracle has created a family, or collection, of software programs known as Oracle Fusion. Due to the price of the software license, it is intended for use by enterprises, particularly medium-sized and large businesses.",
+            "We are expertise in,  \n*Oracle Supply chain planning\n *Oracle supply chain \n*Oracle Manufacturing\n*Warehouse Management\n*Oracle Transportation Management\n*Human capital Management \n*Financial Management \nFor more information reach out support @jesperapps.com \n To go back to menu type menu."
+        ],
+        "section_name": "Oracle Fusion"
+    }
+]
