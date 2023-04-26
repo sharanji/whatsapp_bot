@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     'heyoo',
     'chatbot'
 ]
-CORS_ORIGIN_WHITELIST = ('http://192.168.43.216',
-                         'http://localhost', )
+CORS_ORIGIN_WHITELIST = ('https://rumbling-turquoise-hiss.glitch.me','https://www.whatsapp-crm.jesperapps.com' )
 # CORS_ALLOWED_ORIGINS = [
 #     'http://192.168.43.216/',
 # ]
