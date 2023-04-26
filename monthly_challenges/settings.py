@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
+    'heyoo',
     'chatbot'
 ]
 CORS_ORIGIN_WHITELIST = ('http://192.168.43.216',

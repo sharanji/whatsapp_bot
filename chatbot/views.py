@@ -35,7 +35,7 @@ fb_version = 'v16.0'
 phone_id = '918610711834'
 sender_id = '103249319357540'
 # access_token = 'EAAIe4hYZADdkBANUE0Dm0Q90zwd5LqVJjO08jrn6ZCZCUB0uICoi4pgMHZA8E6ayHbVrtSvRrkilz4c5VTZAJZCUoRzSjBI61TRP3gMPPtI8bxxuYBgsBa4vlEWDCn3A48Ynzu4K6zXdL08otA57Mnszs4jWnRJ51jGOgThZAaPoo5MgDZAZBbLcz'
-access_token = 'EAAIe4hYZADdkBAL8muVji0PIGKaGN8AknUmTaBQvKJk1CAZAxU2hp6ocg90xAreY8NuFGIwSPr3rIuj2GuoPEiCiHBkgm3xHCfb60azAVzDc28uCq9wt7mir435WdIFUqNyMPokFy9O8UpGXCaMeWiXy8bXfGZCMGBO5zNVJJRDgGF7nWg6yb5EWJ4xZBNshuOWYKDwP4QZDZD'
+access_token = 'EAAIe4hYZADdkBAFhM3NhnezMm044REpZAPpxMekupYfGUPViVIv29YYN1pUypVX4UYOfyP2abSZCPTSqikDn12IQt7Xq5DzaWLuEZAwZB6ZA3PswxaZB3RdaDXFNKHxwUJntyZC4tSD9I4WNdLmeQ5DvLhJyU84TDxIgEsh5KNZB7Q4uctgnsZBcsM4E9cFmGPePuqS1uhSf5SbQZDZD'
 php_url ='http://www.whatsapp-crm.jesperapps.com/ajaxSendMessage'
 
 def GetUserInput(jsonData)->str:
@@ -43,7 +43,7 @@ def GetUserInput(jsonData)->str:
        
         if jsonData['entry'][0]['changes'] :
             changes = jsonData['entry'][0]['changes'][0]
-            print("testing at 11.45")  
+            
             if changes['field'] and changes['field'] == 'messages' :
                 try :
                     getUserinput,user_number =  messenger.get_message(jsonData), messenger.get_mobile(jsonData)
@@ -95,7 +95,7 @@ def GetUserInput(jsonData)->str:
                     messenger.send_button(button=b['response'], recipient_id=user_number,)
                     
 
-                return c,cc
+                return r,c,cc
                 
 
     # except :
