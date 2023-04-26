@@ -36,7 +36,7 @@ phone_id = '918610711834'
 sender_id = '103249319357540'
 # access_token = 'EAAIe4hYZADdkBANUE0Dm0Q90zwd5LqVJjO08jrn6ZCZCUB0uICoi4pgMHZA8E6ayHbVrtSvRrkilz4c5VTZAJZCUoRzSjBI61TRP3gMPPtI8bxxuYBgsBa4vlEWDCn3A48Ynzu4K6zXdL08otA57Mnszs4jWnRJ51jGOgThZAaPoo5MgDZAZBbLcz'
 access_token = 'EAAIe4hYZADdkBAOtRew612rP4wTYuxrnH190DZCS8VtL9YBP3mORR44nGczAWwnXbQ4Ca0u6TxZCPfrr1S9Cxw8pue6WHQDmTnIpHhc4ADwmBpjkjQfTe60AQUr1OnITAzZAVnKgA9SUBNrVevlZAkOfpAF2fdkvUqkeezfMDybZBkZCjQlTsUeZAoZAzxO8AuuwGSbD69jjglwZDZD'
-php_url ='http://localhost/whatsapp_crm/ajaxSendMessage'#
+php_url ='https://www.whatsapp-crm.jesperapps.com/ajaxSendMessage'#
 
 def GetUserInput(jsonData)->str:
         messenger = WhatsApp(access_token,  phone_number_id=sender_id)
